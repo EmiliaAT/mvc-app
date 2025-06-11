@@ -16,7 +16,7 @@ export default function App() {
             <Route path="/" element={<Layout />}>
               <Route index element={<Navigate to="/gallery" replace />} />
               <Route path="gallery" element={<Gallery />} />
-              <Route path="details" element={<Details />} />
+              <Route path="details/:id" element={<Details />} />
             </Route>
           </Routes>
         </BrowserRouter>
