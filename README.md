@@ -1,4 +1,4 @@
-# CSC340 - CRUD JPA Demo
+# CSC340 - MVC App
 
 ## Description
 
@@ -11,11 +11,11 @@ Simple CRUD API for Fox Objects with JPA (Hibernate)
 ## Installation
 
 - Get the project
-    - clone
-        ```
-      git clone https://github.com/EmiliaAT/crud-jpa-demo.git
-        ```
-    - OR download zip.
+  - clone
+    ```
+    git clone https://github.com/EmiliaAT/crud-jpa-demo.git
+    ```
+  - OR download zip.
 - Open the project in VS Code.
 - This project is built to run with jdk 21.
 - [Dependencies](https://github.com/EmiliaAT/crud-jpa-demo/blob/main/pom.xml#L32) to JPA and Postgres in addition to the usual Spring Web. JPA handles the persistence, Postgresql is the database to be used.
@@ -38,20 +38,20 @@ Gets a list of all Foxes in the database.
 
 #### Response - A JSON array of Fox objects.
 
- ```json
+```json
 [
-    {
-        "name": "Red Fox",
-        "colour": "Red",
-        "species": "Vulpes vulpes",
-        "description": "The common Red Fox."
-    },
-    {
-        "name": "Arctic Fox",
-        "colour": "White",
-        "species": "Vulpes lagopus",
-        "description": "The common Arctic Fox."
-    }
+  {
+    "name": "Red Fox",
+    "colour": "Red",
+    "species": "Vulpes vulpes",
+    "description": "The common Red Fox."
+  },
+  {
+    "name": "Arctic Fox",
+    "colour": "White",
+    "species": "Vulpes lagopus",
+    "description": "The common Arctic Fox."
+  }
 ]
 ```
 
@@ -67,10 +67,10 @@ Gets an individual Fox in the system. Each Fox is identified by a numeric `id`.
 
 ```json
 {
-    "name": "Arctic Fox",
-    "colour": "White",
-    "species": "Vulpes lagopus",
-    "description": "The common Arctic Fox."
+  "name": "Arctic Fox",
+  "colour": "White",
+  "species": "Vulpes lagopus",
+  "description": "The common Arctic Fox."
 }
 ```
 
@@ -86,12 +86,12 @@ Gets a list of Foxes with a name that contains the given string.
 
 ```json
 [
-    {
-        "name": "Arctic Fox",
-        "colour": "White",
-        "species": "Vulpes lagopus",
-        "description": "The common Arctic Fox."
-    }
+  {
+    "name": "Arctic Fox",
+    "colour": "White",
+    "species": "Vulpes lagopus",
+    "description": "The common Arctic Fox."
+  }
 ]
 ```
 
@@ -107,12 +107,12 @@ Gets a list of Foxes with a colour that match the given string.
 
 ```json
 [
-    {
-        "name": "Arctic Fox",
-        "colour": "White",
-        "species": "Vulpes lagopus",
-        "description": "The common Arctic Fox."
-    }
+  {
+    "name": "Arctic Fox",
+    "colour": "White",
+    "species": "Vulpes lagopus",
+    "description": "The common Arctic Fox."
+  }
 ]
 ```
 
@@ -128,12 +128,12 @@ Gets a list of Foxes with a species that match the given string.
 
 ```json
 [
-    {
-        "name": "Arctic Fox",
-        "colour": "White",
-        "species": "Vulpes lagopus",
-        "description": "The common Arctic Fox."
-    }
+  {
+    "name": "Arctic Fox",
+    "colour": "White",
+    "species": "Vulpes lagopus",
+    "description": "The common Arctic Fox."
+  }
 ]
 ```
 
@@ -149,12 +149,12 @@ Gets a list of Foxes with a description that match the given string.
 
 ```json
 [
-    {
-        "name": "Arctic Fox",
-        "colour": "White",
-        "species": "Vulpes lagopus",
-        "description": "The common Arctic Fox."
-    }
+  {
+    "name": "Arctic Fox",
+    "colour": "White",
+    "species": "Vulpes lagopus",
+    "description": "The common Arctic Fox."
+  }
 ]
 ```
 
@@ -168,10 +168,10 @@ A Fox object. Note the object does not include an ID as this is auto-generated.
 
 ```json
 {
-    "name": "Arctic Fox",
-    "colour": "White",
-    "species": "Vulpes lagopus",
-    "description": "The common Arctic Fox."
+  "name": "Arctic Fox",
+  "colour": "White",
+  "species": "Vulpes lagopus",
+  "description": "The common Arctic Fox."
 }
 ```
 
@@ -179,10 +179,10 @@ A Fox object. Note the object does not include an ID as this is auto-generated.
 
 ```json
 {
-    "name": "Arctic Fox",
-    "colour": "White",
-    "species": "Vulpes lagopus",
-    "description": "The common Arctic Fox."
+  "name": "Arctic Fox",
+  "colour": "White",
+  "species": "Vulpes lagopus",
+  "description": "The common Arctic Fox."
 }
 ```
 
@@ -200,10 +200,10 @@ A Fox object with the updates.
 
 ```json
 {
-    "name": "Arctic Fox",
-    "colour": "White",
-    "species": "Vulpes lagopus",
-    "description": "The common Arctic Fox."
+  "name": "Arctic Fox",
+  "colour": "White",
+  "species": "Vulpes lagopus",
+  "description": "The common Arctic Fox."
 }
 ```
 
@@ -211,10 +211,10 @@ A Fox object with the updates.
 
 ```json
 {
-    "name": "Arctic Fox",
-    "colour": "White",
-    "species": "Vulpes lagopus",
-    "description": "The common Arctic Fox."
+  "name": "Arctic Fox",
+  "colour": "White",
+  "species": "Vulpes lagopus",
+  "description": "The common Arctic Fox."
 }
 ```
 

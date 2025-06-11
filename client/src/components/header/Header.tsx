@@ -1,6 +1,5 @@
-import { Link } from "react-router-dom";
 import "./Header.css";
-import Navbar from "./navbar/Navbar";
+import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -11,17 +10,12 @@ export default function Header() {
           Hello, World!
         </Link>
       </div>
-      {/* Header Sidebar */}
-      <div className="header-sidebar-container">
-        <Navbar>
-          <Link className="header-navbar-item" to="/" replace>
-            Test 1
-          </Link>
-          <Link className="header-navbar-item" to="/" replace>
-            Test 2
-          </Link>
-        </Navbar>
-      </div>
+      {/* Header Navigation */}
+      <nav className="header-navbar-container">
+        <Link className="header-navbar-item" to="/gallery" replace>
+          Gallery
+        </Link>
+      </nav>
     </header>
   );
 }
