@@ -1,4 +1,5 @@
 import useFoxesQuery from "../../../features/foxes/hooks/useFoxesQuery";
+import FoxIcon from "./components/icon/FoxIcon";
 import "./Gallery.css";
 
 export default function Gallery() {
@@ -15,7 +16,7 @@ export default function Gallery() {
         ) : foxes.error ? (
           <p>Error!</p>
         ) : (
-          foxes.data?.map((fox) => <p key={fox.id}>{JSON.stringify(fox)}</p>)
+          foxes.data?.map((fox) => <FoxIcon key={fox.id} item={fox} />)
         )}
       </section>
     </main>

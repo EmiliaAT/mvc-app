@@ -13,9 +13,6 @@ export default function Header() {
         <Link className="header-navbar-item" to="/gallery" replace>
           Gallery
         </Link>
-        <Link className="header-navbar-item" to="/details" replace>
-          Details
-        </Link>
       </nav>
     </header>
   );
