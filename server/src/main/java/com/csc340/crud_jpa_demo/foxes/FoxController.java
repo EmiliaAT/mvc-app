@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
  * It provides endpoints for CRUD operations on fox data.
  */
 @RestController
+@CrossOrigin(origins = "http://localhost:5173")
 public class FoxController {
 
     @Autowired
@@ -31,7 +32,6 @@ public class FoxController {
      *
      * @return List of all foxes.
      */
-    @CrossOrigin(origins = "http://localhost:5173")
     @GetMapping("/api/foxes")
     public List<Fox> getAllFoxes() {
         return this.service.getAllFoxes();

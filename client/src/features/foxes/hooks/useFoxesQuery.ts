@@ -1,9 +1,10 @@
 import { useQuery } from "@tanstack/react-query";
-import { getFoxes } from "../api/Fox";
+import { getFox, getFoxes } from "../api/Fox";
+import type { FoxProps } from "../types/Fox";
 
-export default function useFoxesQuery() {
+export default function useFoxesQuery(props: FoxProps | undefined = undefined) {
   return useQuery({
-    queryKey: ["foxes"],
-    queryFn: getFoxes,
+    queryKey: ["foxes", props],
+    queryFn: () => (props === undefined ? getFoxes() : getFox(props)),
   });
 }
