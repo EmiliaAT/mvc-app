@@ -1,0 +1,71 @@
+.create-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.create-ribbon-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.create-title-text {
+    font-family: 'Inter';
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.create-content-container {
+    display: grid;
+    grid-template-columns: 7.5rem 1fr;
+    gap: 0.5rem;
+    grid-template-areas:
+        "tag-1 field-1"
+        "tag-2 field-2"
+        "tag-3 field-3"
+        "tag-4 field-4"
+        "submit submit"
+}
+
+.create-name-text {
+    grid-area: tag-1;
+}
+
+.create-colour-text {
+    grid-area: tag-2;
+}
+
+.create-species-text {
+    grid-area: tag-3;
+}
+
+.create-description-text {
+    grid-area: tag-4;
+}
+
+.create-name-field {
+    grid-area: field-1;
+}
+
+.create-colour-field {
+    grid-area: field-2;
+}
+
+.create-species-field {
+    grid-area: field-3;
+}
+
+.create-description-field {
+    grid-area: field-4;
+}
+
+.create-submit {
+    grid-area: submit;
+    padding: 0.5rem 5%;
+    margin: 2rem 35%;
+    text-align: center;
+    border: 1px solid lightgrey;
+}
+

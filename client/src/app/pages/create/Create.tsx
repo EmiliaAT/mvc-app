@@ -44,7 +44,9 @@ export default function Create() {
           className="create-description-field"
           name="description"
         />
-        <input type="submit" className="create-submit" value="Submit" />
+        <button type="submit" className="create-submit">
+          Submit
+        </button>
       </form>
     </main>
   );

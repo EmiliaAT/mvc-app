@@ -1,0 +1,101 @@
+.details-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.details-ribbon-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.details-title-text {
+    font-family: 'Inter';
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+.details-options-button {
+    min-width: 5rem;
+    border: 1px solid lightgrey;
+    text-align: center;
+    padding: 0.5rem;
+    font-family: 'Inter';
+    font-weight: 400;
+    font-size: 0.8rem;
+}
+
+.details-options-button.cancel {
+    background-color: crimson;
+    color: white;
+}
+
+.details-content-container {
+    display: grid;
+    grid-template-columns: 7.5rem 1fr;
+    gap: 0.5rem;
+    grid-template-areas:
+        "tag-1 field-1"
+        "tag-2 field-2"
+        "tag-3 field-3"
+        "tag-4 field-4"
+        "submit submit"
+}
+
+.details-name-text {
+    grid-area: tag-1;
+}
+
+.details-colour-text {
+    grid-area: tag-2;
+}
+
+.details-species-text {
+    grid-area: tag-3;
+}
+
+.details-description-text {
+    grid-area: tag-4;
+}
+
+.details-name-field {
+    grid-area: field-1;
+}
+
+.details-colour-field {
+    grid-area: field-2;
+}
+
+.details-species-field {
+    grid-area: field-3;
+}
+
+.details-description-field {
+    grid-area: field-4;
+}
+
+.details-name-content {
+    grid-area: field-1;
+}
+
+.details-colour-content {
+    grid-area: field-2;
+}
+
+.details-species-content {
+    grid-area: field-3;
+}
+
+.details-description-content {
+    grid-area: field-4;
+}
+
+.details-submit {
+    grid-area: submit;
+    padding: 0.5rem 5%;
+    margin: 2rem 35%;
+    text-align: center;
+    border: 1px solid lightgrey;
+}

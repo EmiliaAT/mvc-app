@@ -46,16 +46,14 @@ export default function Details() {
     <main className="details-container">
       {/* Details Ribbon */}
       <header className="details-ribbon-container">
-        <div className="details-title-container">
-          <h1 className="details-title-text">Details</h1>
-          <button
-            type="button"
-            className="details-options-button"
-            onClick={handleSetEditing}
-          >
-            {isEditing ? "Cancel" : "Edit"}
-          </button>
-        </div>
+        <h1 className="details-title-text">Details</h1>
+        <button
+          type="button"
+          className={"details-options-button" + (isEditing ? " cancel" : "")}
+          onClick={handleSetEditing}
+        >
+          {isEditing ? "Cancel" : "Edit"}
+        </button>
       </header>
       {/* Details Content */}
       <form className="details-content-container" onSubmit={handleUpdateFox}>
@@ -104,7 +102,9 @@ export default function Details() {
           <p className="details-description-content">{fox.data?.description}</p>
         )}
         {isEditing ? (
-          <input type="submit" className="details-submit" value="Submit" />
+          <button type="submit" className="details-submit">
+            Submit
+          </button>
         ) : (
           <></>
         )}
