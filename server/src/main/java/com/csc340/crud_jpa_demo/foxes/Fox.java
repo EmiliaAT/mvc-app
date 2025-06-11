@@ -14,6 +14,8 @@ import lombok.Setter;
 public class Fox {
 
     @Id
+    @Getter
+    @Setter
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -39,6 +41,13 @@ public class Fox {
 
     public Fox() {
 
+    }
+
+    public Fox(String name, String description, String colour, String species) {
+        this.name = name;
+        this.colour = colour;
+        this.species = species;
+        this.description = description;
     }
 
     public Fox(Long id, String name, String description, String colour, String species) {

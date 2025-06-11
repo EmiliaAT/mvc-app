@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
-    <div className="header-container">
+    <header className="header-container">
       <div className="header-title-container">
         <Link className="header-title-text" to="/" replace>
           Hello, World!
@@ -17,6 +17,6 @@ export default function Header() {
           Details
         </Link>
       </nav>
-    </div>
+    </header>
   );
 }
