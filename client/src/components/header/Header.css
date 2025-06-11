@@ -1,0 +1,11 @@
+.header-container {
+    padding: 1rem 5%;
+    border-bottom: 1px solid lightgrey;
+}
+
+.header-title-text {
+    font-family: 'Inter';
+    font-size: 2rem;
+    font-weight: 900;
+    color: cadetblue;
+}

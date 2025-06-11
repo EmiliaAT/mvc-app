@@ -7,7 +7,7 @@ export default function Header() {
       {/* Header Title */}
       <div className="header-title-container">
         <Link className="header-title-text" to="/" replace>
-          Hello, World!
+          Fox Gallery
         </Link>
       </div>
     </header>

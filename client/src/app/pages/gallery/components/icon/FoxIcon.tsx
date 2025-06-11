@@ -19,7 +19,7 @@ export default function FoxIcon({ item, onClick }: FoxIconProps) {
         <p className="gallery-icon-details-name">Name: {item.name}</p>
         <p className="gallery-icon-details-colour">Colour: {item.colour}</p>
         <p className="gallery-icon-details-species">Species: {item.species}</p>
-        <p className="gallery-icon-details-description">{item.description}</p>
+        <p className="gallery-icon-details-description">"{item.description}"</p>
       </div>
     </button>
   );

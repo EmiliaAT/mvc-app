@@ -1,0 +1,11 @@
+.gallery-icon-container {
+    padding: 1rem;
+    border: 1px solid lightgrey;
+    font-family: 'Inter';
+    font-weight: 300;
+    line-height: 1.5rem;
+}
+
+.gallery-icon-details-description {
+    margin: 0.5rem 0;
+}

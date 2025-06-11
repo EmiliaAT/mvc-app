@@ -43,7 +43,7 @@ export default function Gallery() {
         <div className="gallery-title-container">
           <h1 className="gallery-title-text">Gallery</h1>
         </div>
-        <div className="gallery-filter">
+        <div className="gallery-filter-container">
           <input
             type="text"
             className="gallery-filter-field"
@@ -57,7 +57,7 @@ export default function Gallery() {
           </Link>
           <button
             type="button"
-            className="gallery-options-button"
+            className={"gallery-options-button" + (isDeleting ? " cancel" : "")}
             onClick={handleSetDeleting}
           >
             {isDeleting ? "Cancel" : "Remove"}
