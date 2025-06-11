@@ -3,7 +3,7 @@ import useFoxesQuery from "../../../features/foxes/hooks/useFoxesQuery";
 import FoxIcon from "./components/icon/FoxIcon";
 import "./Gallery.css";
 import { useNavigate } from "react-router-dom";
-import useFoxesMutate from "../../../features/foxes/hooks/useFoxesMutate";
+import useFoxesDelete from "../../../features/foxes/hooks/useFoxesDelete";
 
 export default function Gallery() {
   const navigate = useNavigate();
@@ -12,7 +12,7 @@ export default function Gallery() {
 
   const foxes = useFoxesQuery();
 
-  const deleteFox = useFoxesMutate();
+  const deleteFox = useFoxesDelete();
 
   const handleSetDeleting = () => {
     setIsDeleting(!isDeleting);

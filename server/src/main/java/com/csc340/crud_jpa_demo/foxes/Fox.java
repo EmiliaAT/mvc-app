@@ -43,14 +43,14 @@ public class Fox {
 
     }
 
-    public Fox(String name, String description, String colour, String species) {
+    public Fox(String name, String colour, String species, String description) {
         this.name = name;
         this.colour = colour;
         this.species = species;
         this.description = description;
     }
 
-    public Fox(Long id, String name, String description, String colour, String species) {
+    public Fox(Long id, String name, String colour, String species, String description) {
         this.id = id;
         this.name = name;
         this.colour = colour;

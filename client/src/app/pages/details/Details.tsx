@@ -1,12 +1,16 @@
 import { useParams } from "react-router-dom";
 import "./Details.css";
 import useFoxQuery from "../../../features/foxes/hooks/useFoxQuery";
-import { useState } from "react";
+import { useState, type FormEvent } from "react";
+import useFoxesUpdate from "../../../features/foxes/hooks/useFoxesUpdate";
+import type { Fox } from "../../../features/foxes/types/Fox";
 
 export default function Details() {
   const { id } = useParams();
 
   const [isEditing, setIsEditing] = useState(false);
+
+  const updateFox = useFoxesUpdate();
 
   const numId = Number(id);
 
@@ -24,8 +28,22 @@ export default function Details() {
     return <p>Error!</p>;
   }
 
+  const handleUpdateFox = (event: FormEvent<HTMLElement>) => {
+    event.preventDefault();
+    const data = new FormData(event.target as HTMLFormElement);
+    const fox: Fox = {
+      id: numId,
+      name: data.get("name") as string,
+      colour: data.get("colour") as string,
+      species: data.get("species") as string,
+      description: data.get("description") as string,
+    };
+    updateFox.mutate(fox);
+    setIsEditing(false);
+  };
+
   return (
-    <main className="details-container">
+    <main className="details-container" onSubmit={handleUpdateFox}>
       {/* Details Ribbon */}
       <header className="details-ribbon-container">
         <div className="details-title-container">

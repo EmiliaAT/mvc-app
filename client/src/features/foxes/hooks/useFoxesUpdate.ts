@@ -1,11 +1,11 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
-import { deleteFox } from "../api/Fox";
+import { updateFox } from "../api/Fox";
 
-export default function useFoxesMutate() {
+export default function useFoxesUpdate() {
   const client = useQueryClient();
 
   return useMutation({
-    mutationFn: deleteFox,
+    mutationFn: updateFox,
     onSuccess: () => client.invalidateQueries({ queryKey: ["foxes"] }),
   });
 }

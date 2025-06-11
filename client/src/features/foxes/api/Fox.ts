@@ -1,5 +1,5 @@
 import axios from "axios";
-import type { Foxes, FoxProps } from "../types/Fox";
+import type { Fox, Foxes, FoxProps } from "../types/Fox";
 
 export const getFoxes = async (): Promise<Foxes> => {
   const response = await axios.get("http://localhost:8080/api/foxes");
@@ -45,4 +45,9 @@ export const getFox = async (props: FoxProps): Promise<Foxes> => {
 
 export const deleteFox = async (id: number): Promise<void> => {
   await axios.delete("http://localhost:8080/api/foxes/" + String(id));
+};
+
+export const updateFox = async (fox: Fox): Promise<void> => {
+  const { id, ...body } = fox;
+  await axios.put("http://localhost:8080/api/foxes/" + String(id), body);
 };
