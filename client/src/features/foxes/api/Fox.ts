@@ -42,3 +42,7 @@ export const getFox = async (props: FoxProps): Promise<Foxes> => {
       ).data as Foxes;
   }
 };
+
+export const deleteFox = async (id: number): Promise<void> => {
+  await axios.delete("http://localhost:8080/api/foxes/" + String(id));
+};
