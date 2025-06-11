@@ -2,7 +2,7 @@ import { useState } from "react";
 import useFoxesQuery from "../../../features/foxes/hooks/useFoxesQuery";
 import FoxIcon from "./components/icon/FoxIcon";
 import "./Gallery.css";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useFoxesDelete from "../../../features/foxes/hooks/useFoxesDelete";
 
 export default function Gallery() {
@@ -36,9 +36,9 @@ export default function Gallery() {
           <h1 className="gallery-title-text">Gallery</h1>
         </div>
         <div className="gallery-options-container">
-          <button type="button" className="gallery-options-button">
+          <Link className="gallery-options-button" to="/create">
             Add
-          </button>
+          </Link>
           <button
             type="button"
             className="gallery-options-button"

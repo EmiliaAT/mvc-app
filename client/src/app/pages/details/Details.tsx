@@ -28,9 +28,9 @@ export default function Details() {
     return <p>Error!</p>;
   }
 
-  const handleUpdateFox = (event: FormEvent<HTMLElement>) => {
+  const handleUpdateFox = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const data = new FormData(event.target as HTMLFormElement);
+    const data = new FormData(event.currentTarget);
     const fox: Fox = {
       id: numId,
       name: data.get("name") as string,
@@ -43,7 +43,7 @@ export default function Details() {
   };
 
   return (
-    <main className="details-container" onSubmit={handleUpdateFox}>
+    <main className="details-container">
       {/* Details Ribbon */}
       <header className="details-ribbon-container">
         <div className="details-title-container">
@@ -58,7 +58,7 @@ export default function Details() {
         </div>
       </header>
       {/* Details Content */}
-      <form className="details-content-container">
+      <form className="details-content-container" onSubmit={handleUpdateFox}>
         <p className="details-name-text">Name:</p>
         {isEditing ? (
           <input

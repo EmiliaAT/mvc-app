@@ -51,3 +51,7 @@ export const updateFox = async (fox: Fox): Promise<void> => {
   const { id, ...body } = fox;
   await axios.put("http://localhost:8080/api/foxes/" + String(id), body);
 };
+
+export const createFox = async (fox: Omit<Fox, "id">): Promise<void> => {
+  await axios.post("http://localhost:8080/api/foxes", fox);
+};

@@ -4,6 +4,7 @@ import Gallery from "./pages/gallery/Gallery";
 import Details from "./pages/details/Details";
 import Layout from "../components/layout/Layout";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import Create from "./pages/create/Create";
 
 export default function App() {
   return (
@@ -17,6 +18,7 @@ export default function App() {
               <Route index element={<Navigate to="/gallery" replace />} />
               <Route path="gallery" element={<Gallery />} />
               <Route path="details/:id" element={<Details />} />
+              <Route path="create" element={<Create />} />
             </Route>
           </Routes>
         </BrowserRouter>
