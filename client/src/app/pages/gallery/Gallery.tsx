@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, type ChangeEvent } from "react";
 import useFoxesQuery from "../../../features/foxes/hooks/useFoxesQuery";
 import FoxIcon from "./components/icon/FoxIcon";
 import "./Gallery.css";
@@ -8,11 +8,19 @@ import useFoxesDelete from "../../../features/foxes/hooks/useFoxesDelete";
 export default function Gallery() {
   const navigate = useNavigate();
 
+  const [filter, setFilter] = useState("");
+
   const [isDeleting, setIsDeleting] = useState(false);
 
-  const foxes = useFoxesQuery();
+  const foxes = useFoxesQuery(
+    filter == "" ? undefined : { kind: "name", key: filter }
+  );
 
   const deleteFox = useFoxesDelete();
+
+  const handleFilterChange = (event: ChangeEvent<HTMLInputElement>) => {
+    setFilter(event.currentTarget.value);
+  };
 
   const handleSetDeleting = () => {
     setIsDeleting(!isDeleting);
@@ -34,6 +42,14 @@ export default function Gallery() {
       <header className="gallery-ribbon-container">
         <div className="gallery-title-container">
           <h1 className="gallery-title-text">Gallery</h1>
+        </div>
+        <div className="gallery-filter">
+          <input
+            type="text"
+            className="gallery-filter-field"
+            placeholder="Filter Name:"
+            onChange={handleFilterChange}
+          />
         </div>
         <div className="gallery-options-container">
           <Link className="gallery-options-button" to="/create">

@@ -6,11 +6,13 @@ import Layout from "../components/layout/Layout";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import Create from "./pages/create/Create";
 
+const client = new QueryClient();
+
 export default function App() {
   return (
     <div className="app-container">
       {/* Top Level Context Definitions */}
-      <QueryClientProvider client={new QueryClient()}>
+      <QueryClientProvider client={client}>
         <BrowserRouter>
           {/* App Route Definitions */}
           <Routes>
