@@ -10,12 +10,6 @@ export default function Header() {
           Hello, World!
         </Link>
       </div>
-      {/* Header Navigation */}
-      <nav className="header-navbar-container">
-        <Link className="header-navbar-item" to="/gallery" replace>
-          Gallery
-        </Link>
-      </nav>
     </header>
   );
 }
